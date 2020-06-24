@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>COE-Robtrix</title>
+	<link rel="stylesheet" href="final.css">
+</head>
+<body>
+	<header>
+		<h1>COE-Robotrix</h1>
+		<nav>
+			<ul>
+			<li>
+			<a href="home.html">Home</a>
+			</li>
+			<li>
+			<a href="first.html">Project1</a>
+				<ul>
+        			<li><a href="first.html#a1">Abstract</a></li>
+        			<li><a href="first.html#b2">Pictures</a></li>
+        			<li><a href="first.html#c3">Code</a></li>
+      				</ul>
+			</li>
+			<li>
+			<a href="second.html" class = "active">Project2</a>
+				<ul>
+        			<li><a href="#a1">Abstract</a></li>
+        			<li><a href="#b2">Pictures</a></li>
+        			<li><a href="#c3">Code</a></li>
+      				</ul>
+			</li>
+			<li>
+			<a href="third.html">Project3</a>
+				<ul>
+        			<li><a href="third.html#a1">Abstract</a></li>
+        			<li><a href="third.html#b2">Pictures</a></li>
+        			<li><a href="third.html#c3">Code</a></li>
+      				</ul>
+			</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div class="Abstract">
+		<a name="a1"></a>
+		<p class="talakai">Abstract</p>
+		<p><h2>Touchless Doorbell</h2>
+Social distancing is the one of the best method to escape from COVID-19. I strongly recommend to stay at home. But we can't avoid some emergency visits to some homes. When we arrived at infront of a house, first we search the doorbell button/ calling bell button. And press the button. But in this special situation this doorbell button can cause the virus to spread. When some infected person press the button the virus hold on that button and when a non infected person touch this button the virus spread to that person. We can avoid this danger by using the touchless doorbell. The existing doorbell can convert to a touchless doorbell.</p>
+		</div>
+		<div class="Pics">
+		<a name="b2"></a>
+		<p class="talakai">Pictures</p>
+		<img src="p2b.png" alt="circuit" width=98%>
+		<img src="p2a.png" alt="connection" width=98%>
+		</div>
+		<div class="Code">
+		<a name="c3"></a>
+		<p class="talakai">Code</p>
+		<pre>
+const int pingPin = 7;
+//adjust this to set the min speed of wave gesture
+const int waveBackWait = 5000;
+//Range of detection from the sensor in cm
+const int range = 7;
+void setup() {
+  pinMode(10, OUTPUT);
+}
+void loop() {
+  long duration, cm;
+  pinMode(pingPin, OUTPUT);
+  digitalWrite(pingPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(pingPin, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(pingPin, LOW);
+pinMode(pingPin, INPUT);
+  duration = pulseIn(pingPin, HIGH);
+  
+  cm = microsecondsToCentimeters(duration);
+if(cm < range && cm > 1){
+    for(int i=waveBackWait; i>0; i--){
+      long new_duration, new_cm;
+      pinMode(pingPin, OUTPUT);
+      digitalWrite(pingPin, LOW);
+      delayMicroseconds(2);
+      digitalWrite(pingPin, HIGH);
+      delayMicroseconds(5);
+      digitalWrite(pingPin, LOW);
+      pinMode(pingPin, INPUT);
+      new_duration = pulseIn(pingPin, HIGH);
+  
+      new_cm = microsecondsToCentimeters(new_duration);
+      if(new_cm < range && new_cm > 1){
+        //ring the doorbell
+        digitalWrite(10,HIGH);
+        delay(500);
+        digitalWrite(10,LOW);
+      }
+    }
+  }
+}
+long microsecondsToCentimeters(long microseconds) {
+  return microseconds / 29 / 2;
+}</pre>
+		</div>
+	</main>
+	<footer>
+		<p>COE-Robotrix VNRVJIET</p>
+	</footer>
+</body>
+</html>
