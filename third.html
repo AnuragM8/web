@@ -45,22 +45,22 @@
 		<div class="Abstract">
 		<a name="a1"></a>
 		<p class="talakai">Abstract</p>
-		<p><h2>Digital Clock</h2>My objective was to build a digital clock using minimum components. This clock display is on two 8 x 8 LED max7219 and uses Arduino for time without rtc. It's cheap and easy, minimal wiring but long code</p>
+		<h2>Digital Clock</h2><p>My objective was to build a digital clock using minimum components. This clock display is on two 8 x 8 LED max7219 and uses Arduino for time without rtc. It's cheap and easy, minimal wiring but long code</p>
 		</div>
 		<div class="Pics">
 		<a name="b2"></a>
 		<p class="talakai">Pictures</p>
-		<img src="p3b.jpg" alt="circuit" width=98%>
-		<img src="p3a.jfif" alt="connection" width=98%>
+		<img src="p3b.jpg" alt="circuit">
+		<img src="p3a.jfif" alt="connection">
 		</div>
 		<div class="Code">
 		<a name="c3"></a>
 		<p class="talakai">Code</p>
 		<pre>
-#include <LedControl.h>
-#include <Wire.h>
-#include <Time.h>
-#include <TimeLib.h>
+#include &lt;LedControl.h&gt;
+#include &lt;Wire.h&gt;
+#include &lt;Time.h&gt;
+#include &lt;TimeLib.h&gt;
 
 
 /*
@@ -118,7 +118,7 @@ void Display() {
 
   delay(000);
 
-  if ( h > 12)
+  if ( h &gt; 12)
   {
     h = (h - 12);
   }
@@ -130,7 +130,7 @@ void Display() {
   // now set hour
   if (h == 1)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, one[n]);
     }
 
@@ -138,13 +138,13 @@ void Display() {
 
   if (h == 2)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, two[n]);
     }
   }
   if (h == 3)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, three[n]);
     }
 
@@ -152,14 +152,14 @@ void Display() {
 
   if (h == 4)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, four[n]);
     }
 
   }
   if (h == 5)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, five[n]);
     }
 
@@ -167,7 +167,7 @@ void Display() {
 
   if (h == 6)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, six[n]);
     }
 
@@ -175,7 +175,7 @@ void Display() {
 
   if (h == 7)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, seven[n]);
     }
 
@@ -183,14 +183,14 @@ void Display() {
 
   if (h == 8)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, eight[n]);
     }
 
   }
   if (h == 9)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, nine[n]);
     }
 
@@ -198,7 +198,7 @@ void Display() {
 
   if (h == 10)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, ten[n]);
     }
 
@@ -206,7 +206,7 @@ void Display() {
 
   if (h == 11)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, eleven[n]);
     }
 
@@ -214,7 +214,7 @@ void Display() {
 
   if (h == 12)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(0, n, twelve[n]);
     }
 
@@ -224,7 +224,7 @@ void Display() {
   // now set minute
   if (m == 0)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, zero2[n]);
     }
 
@@ -232,7 +232,7 @@ void Display() {
 
   if (m == 1)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, one2[n]);
     }
 
@@ -240,7 +240,7 @@ void Display() {
 
   if (m == 2)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, two2[n]);
     }
 
@@ -248,7 +248,7 @@ void Display() {
 
   if (m == 3)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, three2[n]);
     }
 
@@ -256,7 +256,7 @@ void Display() {
 
   if (m == 4)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, four2[n]);
     }
 
@@ -264,7 +264,7 @@ void Display() {
 
   if (m == 5)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, five2[n]);
     }
 
@@ -272,7 +272,7 @@ void Display() {
 
   if (m == 6)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, six2[n]);
     }
 
@@ -280,7 +280,7 @@ void Display() {
 
   if (m == 7)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, seven2[n]);
     }
 
@@ -288,14 +288,14 @@ void Display() {
 
   if (m == 8)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, eight2[n]);
     }
 
   }
   if (m == 9)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, nine2[n]);
     }
 
@@ -303,7 +303,7 @@ void Display() {
 
   if (m == 10)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, ten2[n]);
     }
 
@@ -311,7 +311,7 @@ void Display() {
 
   if (m == 11)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, eleven2[n]);
     }
 
@@ -319,7 +319,7 @@ void Display() {
 
   if (m == 12)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twelve2[n]);
     }
 
@@ -327,7 +327,7 @@ void Display() {
 
   if (m == 13)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirteen2[n]);
     }
 
@@ -335,21 +335,21 @@ void Display() {
 
   if (m == 14)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fourteen2[n]);
     }
 
   }
   if (m == 15)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fifteen2[n]);
     }
 
   }
   if (m == 16)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, sixteen2[n]);
     }
 
@@ -357,7 +357,7 @@ void Display() {
 
   if (m == 17)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, seventeen2[n]);
     }
 
@@ -365,7 +365,7 @@ void Display() {
 
   if (m == 18)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, eighteen2[n]);
     }
 
@@ -373,7 +373,7 @@ void Display() {
 
   if (m == 19)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, nineteen2[n]);
     }
 
@@ -381,7 +381,7 @@ void Display() {
 
   if (m == 20)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twenty2[n]);
     }
 
@@ -389,7 +389,7 @@ void Display() {
 
   if (m == 21)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentyone2[n]);
     }
 
@@ -397,7 +397,7 @@ void Display() {
 
   if (m == 22)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentytwo2[n]);
     }
 
@@ -405,7 +405,7 @@ void Display() {
 
   if (m == 23)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentythree2[n]);
     }
 
@@ -413,7 +413,7 @@ void Display() {
 
   if (m == 24)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentyfour2[n]);
     }
 
@@ -421,14 +421,14 @@ void Display() {
 
   if (m == 25)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentyfive2[n]);
     }
   }
 
   if (m == 26)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentysix2[n]);
     }
 
@@ -436,7 +436,7 @@ void Display() {
 
   if (m == 27)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentyseven2[n]);
     }
 
@@ -444,7 +444,7 @@ void Display() {
 
   if (m == 28)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentyeight2[n]);
     }
 
@@ -452,7 +452,7 @@ void Display() {
 
   if (m == 29)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, twentynine2[n]);
     }
 
@@ -460,7 +460,7 @@ void Display() {
 
   if (m == 30)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirty2[n]);
     }
 
@@ -468,7 +468,7 @@ void Display() {
 
   if (m == 31)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtyone2[n]);
     }
 
@@ -476,7 +476,7 @@ void Display() {
 
   if (m == 32)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtytwo2[n]);
     }
 
@@ -484,7 +484,7 @@ void Display() {
 
   if (m == 33)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtythree2[n]);
     }
 
@@ -492,7 +492,7 @@ void Display() {
 
   if (m == 34)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtyfour2[n]);
     }
 
@@ -500,7 +500,7 @@ void Display() {
 
   if (m == 35)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtyfive2[n]);
     }
 
@@ -508,7 +508,7 @@ void Display() {
 
   if (m == 36)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtysix2[n]);
     }
 
@@ -516,7 +516,7 @@ void Display() {
 
   if (m == 37)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtyseven2[n]);
     }
 
@@ -524,7 +524,7 @@ void Display() {
 
   if (m == 38)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtyeight2[n]);
     }
 
@@ -532,7 +532,7 @@ void Display() {
 
   if (m == 39)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, thirtynine2[n]);
     }
 
@@ -540,7 +540,7 @@ void Display() {
 
   if (m == 40)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, forty2[n]);
     }
 
@@ -548,7 +548,7 @@ void Display() {
 
   if (m == 41)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortyone2[n]);
     }
 
@@ -556,7 +556,7 @@ void Display() {
 
   if (m == 42)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortytwo2[n]);
     }
 
@@ -564,7 +564,7 @@ void Display() {
 
   if (m == 43)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortythree2[n]);
     }
 
@@ -572,7 +572,7 @@ void Display() {
 
   if (m == 44)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortyfour2[n]);
     }
 
@@ -580,7 +580,7 @@ void Display() {
 
   if (m == 45)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortyfive2[n]);
     }
 
@@ -588,7 +588,7 @@ void Display() {
 
   if (m == 46)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortysix2[n]);
     }
 
@@ -596,7 +596,7 @@ void Display() {
 
   if (m == 47)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortyseven2[n]);
     }
 
@@ -604,7 +604,7 @@ void Display() {
 
   if (m == 48)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortyeight2[n]);
     }
 
@@ -612,7 +612,7 @@ void Display() {
 
   if (m == 49)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fortynine2[n]);
     }
 
@@ -620,7 +620,7 @@ void Display() {
 
   if (m == 50)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fifty2[n]);
     }
 
@@ -628,14 +628,14 @@ void Display() {
 
   if (m == 51)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftyone2[n]);
     }
   }
 
   if (m == 52)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftytwo2[n]);
     }
 
@@ -643,14 +643,14 @@ void Display() {
 
   if (m == 53)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftythree2[n]);
     }
 
   }
   if (m == 54)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftyfour2[n]);
     }
 
@@ -658,7 +658,7 @@ void Display() {
 
   if (m == 55)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftyfive2[n]);
     }
 
@@ -666,7 +666,7 @@ void Display() {
 
   if (m == 56)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftysix2[n]);
     }
 
@@ -674,14 +674,14 @@ void Display() {
 
   if (m == 57)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftyseven2[n]);
     }
 
   }
   if (m == 58)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftyeight2[n]);
     }
 
@@ -689,7 +689,7 @@ void Display() {
 
   if (m == 59)
   {
-    for (int n = 0; n < 8; n++) {
+    for (int n = 0; n &lt; 8; n++) {
       lc.setRow(1, n, fiftynine2[n]);
     }
 
