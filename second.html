@@ -12,7 +12,7 @@
 		<nav>
 			<ul>
 			<li>
-			<a href="home.html">Home</a>
+			<a href="index.html">Home</a>
 			</li>
 			<li>
 			<a href="first.html">Project1</a>
@@ -45,14 +45,14 @@
 		<div class="Abstract">
 		<a name="a1"></a>
 		<p class="talakai">Abstract</p>
-		<p><h2>Touchless Doorbell</h2>
+		<h2>Touchless Doorbell</h2><p>
 Social distancing is the one of the best method to escape from COVID-19. I strongly recommend to stay at home. But we can't avoid some emergency visits to some homes. When we arrived at infront of a house, first we search the doorbell button/ calling bell button. And press the button. But in this special situation this doorbell button can cause the virus to spread. When some infected person press the button the virus hold on that button and when a non infected person touch this button the virus spread to that person. We can avoid this danger by using the touchless doorbell. The existing doorbell can convert to a touchless doorbell.</p>
 		</div>
 		<div class="Pics">
 		<a name="b2"></a>
 		<p class="talakai">Pictures</p>
-		<img src="p2b.png" alt="circuit" width=98%>
-		<img src="p2a.png" alt="connection" width=98%>
+		<img src="p2b.png" alt="circuit">
+		<img src="p2a.png" alt="connection">
 		</div>
 		<div class="Code">
 		<a name="c3"></a>
@@ -78,7 +78,7 @@ pinMode(pingPin, INPUT);
   duration = pulseIn(pingPin, HIGH);
   
   cm = microsecondsToCentimeters(duration);
-if(cm < range && cm > 1){
+if(cm &gt; range && cm &lt; 1){
     for(int i=waveBackWait; i>0; i--){
       long new_duration, new_cm;
       pinMode(pingPin, OUTPUT);
@@ -91,7 +91,7 @@ if(cm < range && cm > 1){
       new_duration = pulseIn(pingPin, HIGH);
   
       new_cm = microsecondsToCentimeters(new_duration);
-      if(new_cm < range && new_cm > 1){
+      if(new_cm &lt; range && new_cm &gt; 1){
         //ring the doorbell
         digitalWrite(10,HIGH);
         delay(500);
